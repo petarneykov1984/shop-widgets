@@ -1,0 +1,36 @@
+"use strict";
+
+var _interopRequireDefault = require("/Users/petarneykov/Projects/shop-widgets/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.renderPriceCalculator = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _store = require("./providers/store");
+
+var _widgets = require("./widgets");
+
+// import App from './App';
+//TODO add correct data type
+var renderPriceCalculator = function renderPriceCalculator(data, element) {
+  _reactDom.default.render( /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement(_store.StoreProvider, {
+    products: data
+  }, /*#__PURE__*/_react.default.createElement(_widgets.PriceCalculator, {
+    selections: data
+  }))), element);
+};
+
+exports.renderPriceCalculator = renderPriceCalculator;
+
+if (process.env.NODE_ENV !== "production") {
+  renderPriceCalculator(['fontId001', 'fontId002', 'fontId003'], document.getElementById('root'));
+} // If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+//reportWebVitals();
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9pbmRleC50c3giXSwibmFtZXMiOlsicmVuZGVyUHJpY2VDYWxjdWxhdG9yIiwiZGF0YSIsImVsZW1lbnQiLCJSZWFjdERPTSIsInJlbmRlciIsInByb2Nlc3MiLCJlbnYiLCJOT0RFX0VOViIsImRvY3VtZW50IiwiZ2V0RWxlbWVudEJ5SWQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7OztBQUFBOztBQUNBOztBQUVBOztBQUNBOztBQUZBO0FBSUE7QUFDTyxJQUFNQSxxQkFBcUIsR0FBRyxTQUF4QkEscUJBQXdCLENBQUNDLElBQUQsRUFBWUMsT0FBWixFQUFxQztBQUN4RUMsb0JBQVNDLE1BQVQsZUFDRSw2QkFBQyxjQUFELENBQU8sVUFBUCxxQkFDRSw2QkFBQyxvQkFBRDtBQUFlLElBQUEsUUFBUSxFQUFFSDtBQUF6QixrQkFDRSw2QkFBQyx3QkFBRDtBQUFpQixJQUFBLFVBQVUsRUFBRUE7QUFBN0IsSUFERixDQURGLENBREYsRUFNRUMsT0FORjtBQVFELENBVE07Ozs7QUFZUCxJQUFJRyxPQUFPLENBQUNDLEdBQVIsQ0FBWUMsUUFBWixLQUF5QixZQUE3QixFQUEyQztBQUN6Q1AsRUFBQUEscUJBQXFCLENBQUMsQ0FBQyxXQUFELEVBQWMsV0FBZCxFQUEyQixXQUEzQixDQUFELEVBQTBDUSxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsTUFBeEIsQ0FBMUMsQ0FBckI7QUFDRCxDLENBRUQ7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QgZnJvbSAncmVhY3QnO1xuaW1wb3J0IFJlYWN0RE9NIGZyb20gJ3JlYWN0LWRvbSc7XG4vLyBpbXBvcnQgQXBwIGZyb20gJy4vQXBwJztcbmltcG9ydCB7IFN0b3JlUHJvdmlkZXIgfSBmcm9tICcuL3Byb3ZpZGVycy9zdG9yZSc7XG5pbXBvcnQgeyBQcmljZUNhbGN1bGF0b3IgfSBmcm9tICcuL3dpZGdldHMnO1xuXG4vL1RPRE8gYWRkIGNvcnJlY3QgZGF0YSB0eXBlXG5leHBvcnQgY29uc3QgcmVuZGVyUHJpY2VDYWxjdWxhdG9yID0gKGRhdGE6IGFueSwgZWxlbWVudDogSFRNTEVsZW1lbnQpID0+IHtcbiAgUmVhY3RET00ucmVuZGVyKFxuICAgIDxSZWFjdC5TdHJpY3RNb2RlPlxuICAgICAgPFN0b3JlUHJvdmlkZXIgcHJvZHVjdHM9e2RhdGF9PlxuICAgICAgICA8UHJpY2VDYWxjdWxhdG9yIHNlbGVjdGlvbnM9e2RhdGF9IC8+XG4gICAgICA8L1N0b3JlUHJvdmlkZXI+XG4gICAgPC9SZWFjdC5TdHJpY3RNb2RlPixcbiAgICBlbGVtZW50XG4gICk7XG59O1xuXG5cbmlmIChwcm9jZXNzLmVudi5OT0RFX0VOViAhPT0gXCJwcm9kdWN0aW9uXCIpIHtcbiAgcmVuZGVyUHJpY2VDYWxjdWxhdG9yKFsnZm9udElkMDAxJywgJ2ZvbnRJZDAwMicsICdmb250SWQwMDMnXSwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Jvb3QnKSEpO1xufVxuXG4vLyBJZiB5b3Ugd2FudCB0byBzdGFydCBtZWFzdXJpbmcgcGVyZm9ybWFuY2UgaW4geW91ciBhcHAsIHBhc3MgYSBmdW5jdGlvblxuLy8gdG8gbG9nIHJlc3VsdHMgKGZvciBleGFtcGxlOiByZXBvcnRXZWJWaXRhbHMoY29uc29sZS5sb2cpKVxuLy8gb3Igc2VuZCB0byBhbiBhbmFseXRpY3MgZW5kcG9pbnQuIExlYXJuIG1vcmU6IGh0dHBzOi8vYml0Lmx5L0NSQS12aXRhbHNcbi8vcmVwb3J0V2ViVml0YWxzKCk7XG4iXX0=
